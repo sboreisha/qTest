@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Tests for chrome" verbose="5" parallel="tests" thread-count="5">
+    <parameter name="path" value="https://www.google.com/search?q=what"/>
+    <parameter name="browserVersion" value="54"/>
+    <parameter name="browserName" value="chrome"/>
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="Coogle.com">
+        <classes>
+            <class name="quantrosAutomation.pages.quantrosTest1"/>
+        </classes>
+    </test>
+
+</suite>
